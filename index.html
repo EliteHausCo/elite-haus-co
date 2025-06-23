@@ -6,87 +6,99 @@
   <title>Elite Haus Co.</title>
   <style>
     :root {
-      --gold: #f1c40f;
-      --black: #0d0d0d;
-      --dark-gray: #1a1a1a;
+      --gold: #d4af37;
+      --black: #0b0b0b;
+      --dark: #121212;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, var(--black), #111);
-      color: var(--gold);
-      line-height: 1.6;
+      background-color: var(--black);
+      color: var(--white);
     }
 
     header {
-      background-color: var(--dark-gray);
-      padding: 40px 20px;
+      background-color: var(--dark);
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+      padding: 60px 20px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.8);
     }
 
     header img {
-      width: 200px;
-      margin-bottom: 10px;
-    }
-
-    header h1 {
-      margin: 10px 0;
-      font-size: 2.5rem;
-      color: white;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      color: var(--gold);
-    }
-
-    section {
-      padding: 50px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .card {
-      background: radial-gradient(circle at top left, #1a1a1a, #0f0f0f);
-      border: 1px solid var(--gold);
-      border-radius: 16px;
-      padding: 30px;
-      margin-bottom: 40px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-      transition: all 0.3s ease-in-out;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 40px rgba(241, 196, 15, 0.3);
-    }
-
-    .card h2 {
-      color: white;
-      font-size: 1.8rem;
-      border-bottom: 1px solid var(--gold);
-      padding-bottom: 10px;
+      width: 180px;
       margin-bottom: 20px;
     }
 
-    ul {
+    header h1 {
+      font-size: 3rem;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+
+    header p {
+      color: var(--white);
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    main {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section {
+      background-color: var(--dark);
+      border: 1px solid var(--gold);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(212, 175, 55, 0.2);
+    }
+
+    .section h2 {
+      color: var(--gold);
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 10px;
+    }
+
+    .section ul {
+      list-style-type: disc;
       padding-left: 20px;
     }
 
-    footer {
-      background-color: var(--dark-gray);
-      color: var(--gold);
-      text-align: center;
-      padding: 20px;
-      box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
 
     a.tel {
       color: var(--gold);
       text-decoration: underline;
+    }
+
+    footer {
+      background-color: var(--dark);
+      color: var(--gold);
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #333;
+      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -97,30 +109,32 @@
     <p>Fast, Fair, and Elite Construction Services</p>
   </header>
 
-  <section class="card">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Fast Turn Times</li>
-      <li>Bathrooms</li>
-      <li>Kitchens</li>
-      <li>Decks</li>
-      <li>Storage Buildings</li>
-      <li>Power Washing</li>
-      <li>House Cleaning</li>
-    </ul>
-  </section>
+  <main>
+    <section class="section">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Fast Turn Times</li>
+        <li>Bathrooms</li>
+        <li>Kitchens</li>
+        <li>Decks</li>
+        <li>Storage Buildings</li>
+        <li>Power Washing</li>
+        <li>House Cleaning</li>
+      </ul>
+    </section>
 
-  <section class="card">
-    <h2>Our Mission</h2>
-    <p>At Elite Haus Co., our mission is to be honest, authentic, and genuine with our community. We create a community that is fair priced, provides elite customer service, and delivers excellent quality. When you call "The Haus," you are now part of our family.</p>
-  </section>
+    <section class="section">
+      <h2>Our Mission</h2>
+      <p>At Elite Haus Co., our mission is to be honest, authentic, and genuine with our community. We create a community that is fair priced, provides elite customer service, and delivers excellent quality. When you call "The Haus," you are now part of our family.</p>
+    </section>
 
-  <section class="card">
-    <h2>Contact Us</h2>
-    <p><strong>Owner:</strong> Levi Peckhaus</p>
-    <p><strong>Phone:</strong> <a class="tel" href="tel:9106041007">910-604-1007</a></p>
-    <p>We’re here to help with all your home needs – reach out and become part of the Elite Haus family.</p>
-  </section>
+    <section class="section">
+      <h2>Contact Us</h2>
+      <p><strong>Owner:</strong> Levi Peckhaus</p>
+      <p><strong>Phone:</strong> <a class="tel" href="tel:9106041007">910-604-1007</a></p>
+      <p>We’re here to help with all your home needs – reach out and become part of the Elite Haus family.</p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Elite Haus Co. All rights reserved.</p>
