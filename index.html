@@ -15,24 +15,35 @@
     header {
       background-color: #1a1a1a;
       color: #f1c40f;
-      padding: 40px 20px;
+      padding: 40px 20px 20px;
       text-align: center;
       box-shadow: 0 4px 6px rgba(0,0,0,0.5);
     }
-    nav {
-      background-color: #262626;
-      padding: 15px;
-      text-align: center;
+    header img {
+      width: 100px;
+      margin-bottom: 10px;
     }
-    nav a {
+    .sidebar {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background-color: #1a1a1a;
+      border-right: 2px solid #f1c40f;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      z-index: 1000;
+    }
+    .sidebar a {
       color: #f1c40f;
-      margin: 0 20px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 1.1em;
+      font-size: 1em;
       transition: color 0.3s;
     }
-    nav a:hover {
+    .sidebar a:hover {
       color: #ffffff;
     }
     section {
@@ -59,6 +70,17 @@
     ul {
       padding-left: 20px;
     }
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .photo-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 2px solid #f1c40f;
+    }
     footer {
       background-color: #1a1a1a;
       color: #f1c40f;
@@ -73,18 +95,20 @@
   </style>
 </head>
 <body>
+  <div class="sidebar">
+    <a href="#services">Services</a>
+    <a href="#mission">Mission</a>
+    <a href="#contact">Contact</a>
+    <a href="#photos">Photos</a>
+  </div>
+
   <header>
+    <img src="Untitled design (1).png" alt="Elite Haus Logo">
     <h1>Elite Haus Co.</h1>
     <p>Fast, Fair, and Elite Construction Services</p>
   </header>
 
-  <nav>
-    <a href="#services">Services</a>
-    <a href="#mission">Our Mission</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section id="services" class="fancy-box" onclick="location.href='#services';">
+  <section id="services" class="fancy-box">
     <h2>Our Services</h2>
     <ul>
       <li>Fast Turn Times</li>
@@ -97,16 +121,26 @@
     </ul>
   </section>
 
-  <section id="mission" class="fancy-box" onclick="location.href='#mission';">
+  <section id="mission" class="fancy-box">
     <h2>Our Mission</h2>
     <p>At Elite Haus Co., our mission is to be honest, authentic, and genuine with our community. We create a community that is fair priced, provides elite customer service, and delivers excellent quality. When you call "The Haus," you are now part of our family.</p>
   </section>
 
-  <section id="contact" class="fancy-box" onclick="location.href='#contact';">
+  <section id="contact" class="fancy-box">
     <h2>Contact Us</h2>
     <p><strong>Owner:</strong> Levi Peckhaus</p>
     <p><strong>Phone:</strong> <a class="tel" href="tel:9106041007">910-604-1007</a></p>
     <p>We’re here to help with all your home needs – reach out and become part of the Elite Haus family.</p>
+  </section>
+
+  <section id="photos" class="fancy-box">
+    <h2>Project Gallery</h2>
+    <div class="photo-gallery">
+      <img src="https://via.placeholder.com/300x200?text=Bathroom" alt="Bathroom project">
+      <img src="https://via.placeholder.com/300x200?text=Kitchen" alt="Kitchen project">
+      <img src="https://via.placeholder.com/300x200?text=Deck" alt="Deck project">
+      <img src="https://via.placeholder.com/300x200?text=Power+Wash" alt="Power washing">
+    </div>
   </section>
 
   <footer>
