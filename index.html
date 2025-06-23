@@ -5,110 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elite Haus Co.</title>
   <style>
+    :root {
+      --gold: #f1c40f;
+      --black: #0d0d0d;
+      --dark-gray: #1a1a1a;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #0d0d0d;
-      color: #f1c40f;
+      background: linear-gradient(135deg, var(--black), #111);
+      color: var(--gold);
+      line-height: 1.6;
     }
+
     header {
-      background-color: #1a1a1a;
-      color: #f1c40f;
-      padding: 40px 20px 20px;
+      background-color: var(--dark-gray);
+      padding: 40px 20px;
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
     }
+
     header img {
-      width: 100px;
+      width: 120px;
       margin-bottom: 10px;
     }
-    .sidebar {
-      position: fixed;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      background-color: #1a1a1a;
-      border-right: 2px solid #f1c40f;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      padding: 20px;
-      z-index: 1000;
+
+    header h1 {
+      margin: 10px 0;
+      font-size: 2.5rem;
+      color: white;
     }
-    .sidebar a {
-      color: #f1c40f;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
-      transition: color 0.3s;
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--gold);
     }
-    .sidebar a:hover {
-      color: #ffffff;
-    }
+
     section {
-      padding: 30px 20px;
-      max-width: 1000px;
+      padding: 50px 20px;
+      max-width: 1100px;
       margin: auto;
     }
-    .fancy-box {
-      background-color: #1a1a1a;
-      border: 2px solid #f1c40f;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-      transition: transform 0.3s;
+
+    .card {
+      background: radial-gradient(circle at top left, #1a1a1a, #0f0f0f);
+      border: 1px solid var(--gold);
+      border-radius: 16px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+      transition: all 0.3s ease-in-out;
     }
-    .fancy-box:hover {
-      transform: scale(1.02);
-      cursor: pointer;
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(241, 196, 15, 0.3);
     }
-    .fancy-box h2 {
-      color: #ffffff;
+
+    .card h2 {
+      color: white;
+      font-size: 1.8rem;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
+
     ul {
       padding-left: 20px;
     }
-    .photo-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    .photo-gallery img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 2px solid #f1c40f;
-    }
+
     footer {
-      background-color: #1a1a1a;
-      color: #f1c40f;
+      background-color: var(--dark-gray);
+      color: var(--gold);
       text-align: center;
       padding: 20px;
       box-shadow: inset 0 2px 4px rgba(0,0,0,0.4);
     }
+
     a.tel {
-      color: #f1c40f;
+      color: var(--gold);
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <a href="#services">Services</a>
-    <a href="#mission">Mission</a>
-    <a href="#contact">Contact</a>
-    <a href="#photos">Photos</a>
-  </div>
-
   <header>
     <img src="Untitled design (1).png" alt="Elite Haus Logo">
     <h1>Elite Haus Co.</h1>
     <p>Fast, Fair, and Elite Construction Services</p>
   </header>
 
-  <section id="services" class="fancy-box">
+  <section class="card">
     <h2>Our Services</h2>
     <ul>
       <li>Fast Turn Times</li>
@@ -121,26 +110,16 @@
     </ul>
   </section>
 
-  <section id="mission" class="fancy-box">
+  <section class="card">
     <h2>Our Mission</h2>
     <p>At Elite Haus Co., our mission is to be honest, authentic, and genuine with our community. We create a community that is fair priced, provides elite customer service, and delivers excellent quality. When you call "The Haus," you are now part of our family.</p>
   </section>
 
-  <section id="contact" class="fancy-box">
+  <section class="card">
     <h2>Contact Us</h2>
     <p><strong>Owner:</strong> Levi Peckhaus</p>
     <p><strong>Phone:</strong> <a class="tel" href="tel:9106041007">910-604-1007</a></p>
     <p>We’re here to help with all your home needs – reach out and become part of the Elite Haus family.</p>
-  </section>
-
-  <section id="photos" class="fancy-box">
-    <h2>Project Gallery</h2>
-    <div class="photo-gallery">
-      <img src="https://via.placeholder.com/300x200?text=Bathroom" alt="Bathroom project">
-      <img src="https://via.placeholder.com/300x200?text=Kitchen" alt="Kitchen project">
-      <img src="https://via.placeholder.com/300x200?text=Deck" alt="Deck project">
-      <img src="https://via.placeholder.com/300x200?text=Power+Wash" alt="Power washing">
-    </div>
   </section>
 
   <footer>
