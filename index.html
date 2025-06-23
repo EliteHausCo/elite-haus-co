@@ -8,109 +8,142 @@
     :root {
       --gold: #d4af37;
       --black: #0b0b0b;
-      --dark: #121212;
+      --dark: #1a1a1a;
       --white: #ffffff;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: var(--black);
       color: var(--white);
+      line-height: 1.6;
     }
 
     header {
       background-color: var(--dark);
-      text-align: center;
-      padding: 60px 20px 40px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #333;
     }
 
-    header img {
-      width: 180px;
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 60px;
+      margin-right: 15px;
+    }
+
+    .logo-title {
+      font-size: 1.8rem;
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      background-color: var(--dark);
+      padding: 120px 40px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      color: var(--gold);
       margin-bottom: 20px;
     }
 
-    header h1 {
-      font-size: 3rem;
-      color: var(--gold);
-      letter-spacing: 1px;
-    }
-
-    header p {
-      color: var(--white);
+    .hero p {
       font-size: 1.2rem;
-      margin-top: 10px;
-    }
-
-    main {
-      padding: 60px 20px;
-      max-width: 1200px;
+      color: var(--white);
+      max-width: 700px;
       margin: auto;
     }
 
     .section {
-      background-color: var(--dark);
-      border: 1px solid var(--gold);
-      border-radius: 16px;
-      padding: 40px;
-      margin-bottom: 40px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 30px rgba(212, 175, 55, 0.2);
+      padding: 80px 40px;
+      max-width: 1100px;
+      margin: auto;
     }
 
     .section h2 {
+      font-size: 2.5rem;
       color: var(--gold);
-      font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       border-bottom: 2px solid var(--gold);
       padding-bottom: 10px;
     }
 
     .section ul {
-      list-style-type: disc;
       padding-left: 20px;
+    }
+
+    .section li {
+      margin-bottom: 10px;
     }
 
     .section p {
       font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    a.tel {
-      color: var(--gold);
-      text-decoration: underline;
     }
 
     footer {
       background-color: var(--dark);
-      color: var(--gold);
+      color: var(--white);
       text-align: center;
-      padding: 30px;
+      padding: 40px;
+      font-size: 0.9rem;
       border-top: 1px solid #333;
-      font-size: 0.95rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="Untitled design.svg" alt="Elite Haus Logo">
-    <h1>Elite Haus Co.</h1>
-    <p>Fast, Fair, and Elite Construction Services</p>
+    <div class="logo">
+      <img src="Untitled design.svg" alt="Elite Haus Logo" />
+      <span class="logo-title">Elite Haus Co.</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <section class="hero">
+    <h1>Elite Construction. Honest Values.</h1>
+    <p>We’re committed to delivering fast, high-quality construction with integrity and excellence — when you call "The Haus," you’re family.</p>
+  </section>
+
   <main>
-    <section class="section">
+    <section class="section" id="services">
       <h2>Our Services</h2>
       <ul>
         <li>Fast Turn Times</li>
@@ -123,15 +156,15 @@
       </ul>
     </section>
 
-    <section class="section">
+    <section class="section" id="mission">
       <h2>Our Mission</h2>
       <p>At Elite Haus Co., our mission is to be honest, authentic, and genuine with our community. We create a community that is fair priced, provides elite customer service, and delivers excellent quality. When you call "The Haus," you are now part of our family.</p>
     </section>
 
-    <section class="section">
+    <section class="section" id="contact">
       <h2>Contact Us</h2>
       <p><strong>Owner:</strong> Levi Peckhaus</p>
-      <p><strong>Phone:</strong> <a class="tel" href="tel:9106041007">910-604-1007</a></p>
+      <p><strong>Phone:</strong> <a href="tel:9106041007" style="color: var(--gold); text-decoration: underline;">910-604-1007</a></p>
       <p>We’re here to help with all your home needs – reach out and become part of the Elite Haus family.</p>
     </section>
   </main>
