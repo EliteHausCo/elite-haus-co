@@ -4,6 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elite Haus Co.</title>
+  
+  <!-- Font Awesome CDN for icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pb6V5fHx52X+3kYhUZk6x4zHhjGg0HNuS7XouUVIGXF+8nRDOD6kMqNxxYmTWZ+/xdW4V+JlK9l5t6b6+6C1hA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  
   <style>
     :root {
       --gold: #d4af37;
@@ -120,6 +130,19 @@
       font-size: 0.9rem;
       border-top: 1px solid #333;
     }
+
+    /* Social media icons styles */
+    .social-links a {
+      color: var(--gold);
+      font-size: 1.8rem;
+      margin-right: 25px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -166,6 +189,19 @@
       <p><strong>Owner:</strong> Levi Peckhaus</p>
       <p><strong>Phone:</strong> <a href="tel:9106041007" style="color: var(--gold); text-decoration: underline;">910-604-1007</a></p>
       <p>We’re here to help with all your home needs – reach out and become part of the Elite Haus family.</p>
+
+      <p><strong>Follow us on social media:</strong></p>
+      <p class="social-links">
+        <a href="https://facebook.com/YourPage" target="_blank" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://twitter.com/YourProfile" target="_blank" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://instagram.com/YourProfile" target="_blank" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </p>
     </section>
   </main>
 
